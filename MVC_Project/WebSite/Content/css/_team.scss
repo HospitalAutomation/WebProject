@@ -1,0 +1,99 @@
+.team {
+    padding-bottom: 60px;
+
+    h2 {
+        font-size: 90px;
+        color: $primary-color;
+        margin-top: 50px;
+        margin-bottom: 0;
+
+        @media (max-width: 479px) {
+            font-size: 50px;
+            margin-top: 40px;
+        }
+    }
+
+    h4 {
+        font-size: 24px;
+        color: $text-color;
+        margin-top: 0;
+        margin-bottom: 45px;
+    }
+}
+
+.single-member {
+    margin: 0;
+    padding: 0;
+}
+
+.single-member:hover .person-detail {
+    background: $button-hover;
+}
+
+.single-member:hover .arrow-top {
+    background: $button-hover;
+}
+
+.single-member:hover .arrow-bottom {
+    background: $button-hover;
+}
+
+.person img {
+    width: 100%;
+}
+
+.person-detail {
+    padding: 10px;
+    background: $light-bg-color;
+    position: relative;
+    @include general-transition(0.7s);
+
+    h3 {
+        font-size: 30px;
+        color: $button-text-color;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            font-size: 26px;
+        }
+    }
+
+    p {
+        font-size: 13px;
+        color: $button-text-color;
+        font-family: 'Open Sans', sans-serif;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.arrow-top {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $light-bg-border;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    bottom: -10px;
+    left: 46%;
+    @include general-transition(0.7s);
+}
+
+.arrow-bottom {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $light-bg-border;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: -9px;
+    left: 46%;
+    @include general-transition(0.7s);
+}

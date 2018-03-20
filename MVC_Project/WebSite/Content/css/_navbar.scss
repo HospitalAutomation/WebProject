@@ -1,0 +1,142 @@
+/*Navbar*/
+
+.top-header {
+    background-color: $bg-color !important;
+    /*position: fixed;*/
+    width: 100%;
+    z-index: 99999;
+
+    img.logo {
+        margin-bottom: 10px;
+        margin-top: 0;
+        @include general-transition(.5s);
+
+        @media (max-width: 479px) {
+            margin: 0;
+        }
+    }
+}
+
+.header-backup {
+    width: 20px;
+    height: 100px;
+    background-color: $header-backup-bg-color;
+    margin: auto;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        height: 131px;
+    }
+
+    @media (max-width: 479px) {
+        height: 141px;
+    }
+}
+
+.header-logo {
+    @media (min-width: 480px) and (max-width: 767px) {
+        img {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 479px) {
+        margin-top: 20px !important;
+    }
+}
+
+
+nav {
+    background-color: $header-backup-bg-color;
+    width: 100%;
+    z-index: 99999;
+    border-color: $header-backup-bg-color;
+    margin-bottom: 0;
+    margin-top: -30px;
+    @include general-transition(.5s);
+
+    toggle {
+        border-color: #fff;
+    }
+
+    .fa, .fab, .fal, .far, .fas {
+        color: $text-color;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        .nav-link.active{
+            color: $primary-color !important;
+        }
+
+        .nav-link {
+            font-size: $lg-font-size;
+            color: $text-color;
+            text-transform: uppercase;
+            @include general-transition(.7s);
+            padding: 14px 15px;
+            font-weight: bold;
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                font-size: $md-font-size;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                font-size: $sm-font-size;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                font-size: $xs-font-size;
+                text-align: left;
+            }
+
+            @media (max-width: 479px) {
+                font-size: $xs-font-size;
+                text-align: left;
+            }
+        }
+
+        .nav-link:hover {
+            color: $primary-color;
+        }
+    }
+
+    a.dropdown-item {
+        text-transform: uppercase;
+        font-size: $sm-font-size;
+        color: $text-color;
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            font-size: $xs-font-size*2/3;
+            text-align: left;
+        }
+
+        @media (max-width: 479px) {
+            font-size: $xs-font-size*2/3;
+            text-align: left;
+        }
+    }
+
+    a.dropdown-item:hover {
+        color: $primary-color;
+    }
+}
+
+.nav-bar {
+    margin-top: 29px;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        margin-top: 0;
+    }
+
+    @media (max-width: 479px) {
+        margin-top: 0;
+    }
+}

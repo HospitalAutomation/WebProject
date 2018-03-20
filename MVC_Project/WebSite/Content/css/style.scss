@@ -1,0 +1,112 @@
+$primary-color: #42B3E5;
+$bg-color: #FFFFFF;
+$header-backup-bg-color: transparent;
+
+$text-color: #737373;
+$bold-text-color: #383838;
+$form-input-text: #084A5C;
+
+$button-color: #3A9ECB;
+$carousel-control-icon-bg: #3A9ECB;
+$carousel-control-icon-color: FFFFFF;
+$button-text-color: #FFFFFF;
+$button-hover: #2A2A2A;
+
+$dark-bg-hover: #3A9DCA;
+$light-bg-color: #3A9CC8;
+$light-bg-border: #3BA0CC;
+$border-bottom: #13849C;
+$form-border-top: #53CDE5;
+$transparent-bg-color: rgba(0, 0, 0, 0.51);
+
+$footer-icons-color: #B1B1B1;
+
+$lg-font-size: 28px;
+$md-font-size: 24px;
+$sm-font-size: 20px;
+$xs-font-size: 24px;
+
+@mixin carousel-control-left-icon-color($color) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23#{$color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+@mixin carousel-control-right-icon-color($color) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23#{$color}' viewBox='0 0 5 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+@mixin general-transition($s) {
+    transition: all $s ease 0s;
+    -webkit-transition: all $s ease 0s;
+    -moz-transition: all $s ease 0s;
+    -o-transition: all $s ease 0s;
+    -ms-transition: all $s ease 0s;
+}
+
+/*General*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'BenchNine', sans-serif;
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+a:hover,
+a:visited,
+a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@import 'navbar';
+@import 'slider';
+@import 'about';
+@import 'services';
+@import 'team';
+@import 'contact';
+
+.footer-para {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    p {
+        font-size: 12px;
+        color: #000;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        margin: 0;
+        padding: 25px 0;
+
+        @media (max-width: 479px) {
+            font-size: 10px;
+        }
+    }
+
+    .icons {
+        font-size: 28px;
+        i {
+            color: $footer-icons-color;
+            padding: 22px 10px;
+
+            @media (max-width: 479px) {
+                font-size: 18px;
+                padding: 25px 7px;
+            }
+        }
+
+        i:hover {
+            color: $primary-color;
+        }
+    }
+}

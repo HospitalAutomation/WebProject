@@ -1,0 +1,230 @@
+/*Slider*/
+.slider {
+    &-row {
+        margin: 0;
+        padding: 0;
+    }
+
+    &-wrapper {
+        margin: 0;
+        padding: 0 !important;
+        background: #000 !important;
+    }
+}
+
+.carousel {
+    font-family: 'BenchNine', sans-serif;
+    width: 100%;
+
+    &-inner {
+        background: $bg-color;
+    }
+
+    .carousel-control {
+        width: 5%;
+        cursor: pointer;
+
+        &-prev-icon {
+            @include carousel-control-left-icon-color($carousel-control-icon-color);
+            padding: 20px;
+            background-color: $carousel-control-icon-bg;
+            border-radius: 35%;
+            color: transparent;
+            margin-left: 0;
+            margin-top: 50px;
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                padding: 18px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                padding: 15px;
+                margin-top: 155px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                padding: 12px;
+                margin-top: 200px;
+            }
+
+            @media (max-width: 479px) {
+                padding: 10px;
+                margin-top: 185px;
+            }
+        }
+
+        &-next-icon {
+            @include carousel-control-right-icon-color($carousel-control-icon-color);
+            padding: 20px;
+            background-color: $carousel-control-icon-bg;
+            border-radius: 35%;
+            color: transparent;
+            margin-right: 0;
+            margin-top: 50px;
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                padding: 18px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                padding: 15px;
+                margin-top: 155px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                padding: 12px;
+                margin-top: 200px;
+            }
+
+            @media (max-width: 479px) {
+                padding: 10px;
+                margin-top: 185px;
+            }
+        }
+    }
+
+    &-indicators {
+        @media (min-width: 480px) and (max-width: 767px) {
+            margin-bottom: 0px;
+        }
+
+        @media (max-width: 479px) {
+            margin-bottom: 0px;
+        }
+
+        li {
+            cursor: pointer;
+            background-color: $text-color;
+            border: 1px solid $text-color*1.1;
+            height: 5px;
+            width: 60px;
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                height: 4px;
+                width: 30px;
+            }
+
+            @media (max-width: 479px) {
+                height: 4px;
+                width: 30px;
+            }
+
+            &:hover {
+                background-color: $button-color;
+                border: 1px solid $button-color*1.1;
+            }
+
+            &.active {
+                background-color: $button-color;
+                border: 1px solid $button-color*1.1;
+            }
+        }
+    }
+
+    &-caption {
+        position: absolute;
+        text-align: left;
+        left: 12%;
+        line-height: 1;
+        top: 50%;
+        margin-top: -100px;
+        text-shadow: 0 3px 4px rgba(0,0,0,.6);
+        margin-left: 5px;
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            margin-top: -110px;
+        }
+
+        @media (max-width: 479px) {
+            margin-top: -60px;
+        }
+
+        h1 {
+            font-size: 157px;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                font-size: 120px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                font-size: 90px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                font-size: 75px;
+            }
+
+            @media (max-width: 479px) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 0;
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                font-size: 32px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                font-size: 30px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                font-size: 25px;
+            }
+
+            @media (max-width: 479px) {
+                font-size: 12px;
+            }
+        }
+
+        button {
+            width: 240px;
+            height: 60px;
+            background: $button-color;
+            color: $button-text-color;
+            font-size: 30px;
+            text-transform: uppercase;
+            border: 0;
+            cursor: pointer;
+
+            @include general-transition(.5s);
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                width: 215px;
+                height: 55px;
+                font-size: 26px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 165px;
+                height: 40px;
+                font-size: 22px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                width: 150px;
+                height: 35px;
+                font-size: 20px;
+            }
+
+            @media (max-width: 479px) {
+                width: 80px;
+                height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        button:hover {
+            background: $button-hover;
+        }
+    }
+}

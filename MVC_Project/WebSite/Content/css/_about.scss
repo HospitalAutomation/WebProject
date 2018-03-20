@@ -1,0 +1,126 @@
+/*About*/
+.about {
+    h2 {
+        font-size: 90px;
+        color: $primary-color;
+        margin-top: 50px;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            font-size: 75px !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            font-size: 70px !important;
+        }
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            font-size: 70px !important;
+        }
+    }
+
+    h4 {
+        font-size: 24px;
+        color: $text-color;
+        margin-bottom: 45px;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            font-size: 22px !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            font-size: 18px !important;
+        }
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            font-size: 21px !important;
+        }
+
+        @media (max-width: 479px) {
+            font-size: 18px !important;
+        }
+    }
+
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &-details {
+        background: $button-hover;
+        border-top: 2px solid $bg-color;
+        @include general-transition(.7s);
+
+        h3 {
+            font-size: 36px;
+            color: $button-text-color;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 13px;
+            color: $button-text-color;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0 25px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.single-about-detail {
+    position: relative;
+
+    :hover .about-details {
+        background: $dark-bg-hover;
+    }
+
+    :hover .pentagon-text h1 {
+        color: $dark-bg-hover;
+    }
+}
+
+.pentagon-text {
+    width: 70px;
+    height: 52px;
+    background: $bg-color;
+    position: relative;
+    top: -30px;
+    left: 43%;
+
+    h1 {
+        font-size: 60px;
+        color: $bold-text-color;
+        margin-top: 0;
+        margin-bottom: 0;
+        @include general-transition(.7s);
+        position: absolute;
+        left: 15%;
+        width: 50px;
+        top: -6%;
+    }
+
+    :before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: -10px;
+        width: 0;
+        height: 0;
+        border-left: 34px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 15px solid #fff;
+    }
+
+    :after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: -10px;
+        width: 0;
+        height: 0px;
+        border-left: 36px solid transparent;
+        border-right: 34px solid transparent;
+        border-top: 15px solid #fff;
+    }
+}
+

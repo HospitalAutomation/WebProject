@@ -1,0 +1,206 @@
+.contact-caption {
+    background: $dark-bg-hover;
+}
+
+.caption-margin {
+    margin-top: 120px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-top: 110px;
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        margin-top: 140px;
+    }
+
+    @media (max-width: 479px) {
+        margin-top: 38%;
+    }
+}
+
+.contact-heading {
+    h2 {
+        color: $button-text-color;
+        font-size: 90px;
+
+        @media (max-width: 479px) {
+            font-size: 50px;
+            text-align: left;
+            margin-left: 15px;
+        }
+    }
+}
+
+.contact-info {
+    h3 {
+        padding-left: 0;
+        font-size: 30px;
+        color: $button-text-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid $border-bottom;
+        padding-bottom: 12px;
+        margin-bottom: 0;
+
+        @media (max-width: 479px) {
+            font-size: 25px;
+            padding-bottom: 8px;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            margin-left: 4px;
+        }
+    }
+
+    li {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: $button-text-color;
+
+        @media (max-width: 479px) {
+            font-size: 10px;
+        }
+
+        i {
+            color: $button-text-color;
+            font-size: 16px;
+            padding-right: 12px;
+            width: 25px;
+            height: 38px;
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                width: 25px;
+            }
+
+            @media (max-width: 479px) {
+                font-size: 13px;
+                width: 20px;
+                height: 18px;
+                padding: 10px;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+}
+
+.contact-form {
+    width: 100%;
+
+    h3 {
+        padding-left: 0;
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid $border-bottom;
+        padding-bottom: 12px;
+        margin-bottom: 0;
+
+        @media (max-width: 479px) {
+            font-size: 25px;
+            padding-bottom: 8px;
+            margin-bottom: 0;
+            margin-right: 0px;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        background: $button-text-color;
+        font-size: 13px;
+        color: $form-input-text;
+        font-family: 'Open Sans', sans-serif;
+        border: 0;
+        margin-bottom: 12px;
+    }
+
+    textarea {
+        font-family: 'Open Sans', sans-serif;
+        padding: 12px;
+        width: 100%;
+        height: 140px;
+        border: 0;
+        margin-bottom: 12px;
+    }
+
+    input.submit-btn {
+        width: 180px;
+        height: 50px;
+        float: right;
+        font-size: 24px;
+        color: $button-text-color;
+        background: url(../img/btn-bg.jpg);
+        background-repeat: no-repeat;
+        padding: 0;
+        font-family: 'BenchNine', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.info-detail {
+    border-top: 1px solid $form-border-top;
+    padding-top: 15px;
+}
+
+.form {
+    border-top: 1px solid $form-border-top;
+    padding-top: 15px;
+    text-align: right;
+}
+
+#map {
+    height: 830px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        height: 1050px;
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        height: 1120px;
+    }
+
+    @media (max-width: 479px) {
+        height: 950px;
+    }
+}
+
+.map {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact {
+    position: absolute;
+    width: 100%;
+    height: 830px;
+    margin-top: 0px;
+    left: 0;
+    margin-top: -830px;
+    background: rgba(0, 0, 0, 0.51);
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-top: -1050px;
+        height: 1050px;
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        height: 1120px;
+        margin-top: -1120px;
+    }
+
+    @media (max-width: 479px) {
+        height: 950px;
+        margin-top: -950px;
+    }
+}
