@@ -1,32 +1,93 @@
-﻿
+﻿@model WebSite.Models.hastalar
 @{
     ViewBag.Title = "Register";
 }
 
-<div class="container">
-    <div class="row">
-        <div class="offset-lg-3 col-lg-6 offset-md-1 col-md-10 col-sm-12 contact-caption clearfix">
+<script src="https://code.jquery.com/jquery-1.12.4.js"integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(function () {
+            $('#date-pickerDogum').datepicker({
+                format: 'dd:MM:yyyy',
+                changeMonth: true,
+                changeYear: true,
+                maxDate: 0
+            });
+        });
+</script>
+@*<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii",
+        linkField: "mirror_field",
+        linkFormat: "yyyy-mm-dd hh:ii"
+    });
+</script>*@     
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6 offset-md-1 col-md-10 col-sm-12 contact-caption clearfix">
                 <div class="col-md-12 contact-form">
-                    <h3>kayıt</h3>
+                    <h3>kayıt ol</h3>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <form class="form-group">
                         <br />
                         <div class="input-group col-md-10 offset-md-1">
                             <span class="input-group-addon input-group-icon"><i class="fa fa-user"></i></span>
-                            <input class="form-control col-md-10" type="text" placeholder="Ad Soyad">
-                        </div>
-                        <br/>
-                        <div class="input-group col-md-10 offset-md-1">
-                            <span class="input-group-addon input-group-icon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control col-md-10" type="email" placeholder="Email Adresi">
+                            @Html.EditorFor(model => model.AD, new { htmlAttributes = new { @type = "text", @placeholder = "Ad", @class = "form-control col-md-10" } })
+                            @Html.ValidationMessageFor(model => model.AD, "", new { @class = "text-danger" })
                         </div>
                         <br />
-                        <input class="phone" type="text" placeholder="Phone No:">
-                        <textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                        <input class="submit-btn" type="submit" value="SUBMIT">
+                        <div class="input-group col-md-10 offset-md-1">
+                            <span class="input-group-addon input-group-icon"><i class="fa fa-user"></i></span>
+                            @Html.EditorFor(model => model.SOYAD, new { htmlAttributes = new { @type = "text", @placeholder = "Soyad", @class = "form-control col-md-10" } })
+                            @Html.ValidationMessageFor(model => model.SOYAD, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                        <div class="input-group col-md-10 offset-md-1">
+                            <span class="input-group-addon input-group-icon"><i class="fa fa-user"></i></span>
+                            @Html.EditorFor(model => model.TC, new { htmlAttributes = new { @type = "text", @placeholder = "TC Kimlik No", @class = "form-control col-md-10" } })
+                            @Html.ValidationMessageFor(model => model.TC, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                        <div class="input-group col-md-10 offset-md-1">
+                            <span class="input-group-addon input-group-icon"><i class="fa fa-user"></i></span>
+                            @Html.EditorFor(model => model.TELEFON, new { htmlAttributes = new { @type = "text", @placeholder = "Telefon(5xxxxxxxxxx)", @class = "form-control col-md-10" } })
+                            @Html.ValidationMessageFor(model => model.TELEFON, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                        <div class="input-group col-md-10 offset-md-1">
+                            <span class="input-group-addon input-group-icon"><i class="fa fa-user"></i></span>
+                            @Html.EditorFor(model => model.ŞİFRE, new { htmlAttributes = new { @type = "password", @placeholder = "Şifre Oluşturunuz", @class = "form-control col-md-10" } })
+                            @Html.ValidationMessageFor(model => model.ŞİFRE, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                        <div class="input-group col-md-10 offset-md-1">
+                            <span class="input-group-addon input-group-icon"><i class="fa fa-user"></i></span>
+                            @Html.EditorFor(model => model.DOĞUM_TARİHİ, new { htmlAttributes = new { @class = "col-md-10 ", @id= "date-pickerDogum" } })
+                            <input type="text" id="mirror_field" value="" readonly />
+                            @Html.ValidationMessageFor(model => model.DOĞUM_TARİHİ, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                        <div class="input-group col-md-10 offset-md-1">
+                            @Html.EditorFor(model => model.CİNSİYET, "Erkek", new { htmlAttributes = new { @type = "radio", @name = "gender", @Value = "Erkek", @id = "gender-male", @class = "form-control col-md-10" } })
+
+                            <label for="gender-male">Erkek</label>
+                            @Html.EditorFor(model => model.CİNSİYET, "Kadın", new { htmlAttributes = new { @type = "radio", @name = "gender", @Value = "Kadın", @id = "gender-female", @class = "form-control col-md-10" } })
+
+                            <label for="gender-female">Kadın</label>
+                            @Html.ValidationMessageFor(model => model.CİNSİYET, "", new { @class = "text-danger" })
+                        </div>
+                        <br />                       
+                        <input type="submit" value="KAYIT OL" class="submit-btn btn-default" />
                     </form>
                 </div>
+            </div>
         </div>
     </div>
-</div>
+}
 
 

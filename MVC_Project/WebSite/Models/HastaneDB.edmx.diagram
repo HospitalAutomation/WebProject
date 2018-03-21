@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="be8d1f4a4653491fa86325eef9e5e8c0" Name="Diagram1">
+        <EntityTypeShape EntityType="WebHastaneDBModel.hastaKabul" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.hastalar" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.hastaSikayetleri" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.ilaclar" Width="1.5" PointX="8.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.muayeneler" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.personeller" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.poliklinikler" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.randevular" Width="1.5" PointX="11.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.receteler" Width="1.5" PointX="8.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.recetelerSatirlari" Width="1.5" PointX="10.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.tahliller" Width="1.5" PointX="6" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.tahlillerSonuc" Width="1.5" PointX="8.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.teshisler" Width="1.5" PointX="13.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebHastaneDBModel.unvanlar" Width="1.5" PointX="3.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__hastaKabu__dokto__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__hastaKabu__polik__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__hastaKabu__rande__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_hastaKabul_hastalar" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_hastaKabul_personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_hastaKabul_poliklinikler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__hastaSika__hasta__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__randevula__hasta__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__receteler__hasta__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_tahlillerSonuc_hastalar" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__muayenele__hasta__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_recetelerSatirlari_ilaclar" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__muayenele__dokto__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__teshisler__muaye__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__personell__klini__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__personell__unvan__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__randevula__dokto__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__receteler__dokto__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__teshisler__dokto__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_tahlillerSonuc_personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK_tahlillerSonuc_personeller1" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__randevula__polik__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__receteler__recet__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="WebHastaneDBModel.FK__tahliller__tahli__5EBF139D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
